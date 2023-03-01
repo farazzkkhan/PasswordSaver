@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PassWord Saver 2.0</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/stylefile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      #more {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="heading">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> HOME</a>
+          </li>
+          <li>
+            <a href="aboutus.html"
+              ><i class="fa fa-address-card"></i> ABOUT US</a
+            >
+          </li>
+          <li>
+            <a href="contactus.html"
+              ><i class="fa fa-fw fa-envelope"></i> CONTACT US</a
+            >
+          </li>
+          <li>
+            <a href="pass.html"><i class="fa fa-folder"></i> SAVED PASSWORDS</a>
+          </li>
+          <li>
+            <a class="logi" href="pass.html"><i class="fa fa-user"></i> LOGIN</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>PassWord Saver 2.0</h1>
+      <hr />
+      <h2 class="headong">Why Chose Us ??</h2>
+      <p class="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+        fugiat neque tenetur sint sunt itaque sequi ut minima officia rem nulla,
+        aperiam amet eius laudantium eaque id ullam quisquam quasi qui adipisci
+        ipsa consequatur vero. Aut distinctio nisi magnam magni officiis quo
+        quia. Fugiat sapiente, neque obcaecati modi eos accusantium! Lorem
+        ipsum, dolor sit amet consectetur adipisicing elit. Culpa soluta dicta
+        maiores assumenda, facilis sit incidunt asperiores illo? Odit voluptas
+        odio praesentium? Eaque dicta explicabo repudiandae quibusdam.
+        Doloribus, recusandae mollitia nesciunt fugit quia dolorum. Explicabo a
+        nisi vitae asperiores amet, voluptas dicta pariatur quasi provident
+        veritatis laudantium sit officiis saepe.
+      </p>
+      <h2 class="headong">SO SAVE YOUR PASSWORDS NOW..</h2>
+    </header>
+    <hr />
+    <main>
+      <div class="row">
+        <div class="column1" style="background-color: #aaa">
+          <h2>PassWord</h2>
+          <h2>is here..</h2>
+          <input
+            type="text"
+            id="mySearch"
+            onkeyup="myFunction()"
+            placeholder="Search here..."
+            title="Type in a category"
+          />
+          <ul class="ull">
+            <li><a href="files/facebook.html">FACEBOOK</a></li>
+            <li><a href="files/amazon.html">AMAZON</a></li>
+            <li><a href="files/apple.html">APPLE</a></li>
+            <li><a href="files/netflix.html">NETFLIX</a></li>
+            <li><a href="files/google.html">GOOGLE</a></li>
+            <li><a href="files/microsoft.html">MICROSOFT</a></li>
+            <span id="dots"></span>
+            <span id="more">
+              <li><a href="#">GMAIL</a></li>
+              <li><a href="#">LINKED IN</a></li>
+              <li><a href="#">TWITTER</a></li>
+              <li><a href="#">YOUTUBE</a></li>
+              <li><a href="#">INSTAGRAM</a></li>
+              <li><a href="#">PINTEREST</a></li>
+              <li><a href="#">SNAPCHAT</a></li>
+              <li><a href="#">SKYPE</a></li>
+              <li><a href="#">ANDROID</a></li>
+              <li><a href="#">YAHOO</a></li>
+              <li><a href="#">REDDIT</a></li>
+            </span>
+            <button onclick="myFunction1()" id="myBtn"></button>
+          </ul>
+        </div>
+        <div class="column2" style="background-color: #bbb">
+          <p>
+            Okay, So you are most welcome here is this website here you will be
+            able to understand this website by the given images.
+          </p>
+        </div>
+        <div class="column3" style="background-color: #ccc">
+          <div class="card">
+            <img
+              src="images/example.png"
+              alt="your profile"
+              style="width: 100%"
+            />
+            <div class="example">
+              <h4><b>FARAZ KHAN</b></h4>
+              <p>STUDENT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex-all-center">
+      <p>CopyRight &copy; All Rights Reserved</p>
+    </footer>
+    <script src="JS/JavaScript.js"></script>
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
